@@ -7,6 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Proprietaire extends Model
 {
+    protected $fillable = [
+        'prenom',
+        'nom',
+        'dateNaissance',
+        'lieuNaissance',
+        'civilite',
+        'codePieceIdentite',
+        'numeroPieceIdentite'
+    ];
     use HasFactory;
     public function proprietes()
     {

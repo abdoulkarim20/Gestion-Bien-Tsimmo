@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Type extends Model
 {
+    protected $fillable = ['libelle'];
     public function proprietes()
     {
         return $this->hasMany(Propriete::class);

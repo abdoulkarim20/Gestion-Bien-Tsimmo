@@ -7,6 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Propriete extends Model
 {
+    protected $fillable = [
+        'libelle',
+        'superficie',
+        'nombrePiece',
+        'quartier_id',
+        'deduction_id',
+        'agence_id',
+        'type_id',
+        'proprietaire_id'
+    ];
+
     public function proprietaire()
     {
         return $this->belongsTo(Proprietaire::class);
