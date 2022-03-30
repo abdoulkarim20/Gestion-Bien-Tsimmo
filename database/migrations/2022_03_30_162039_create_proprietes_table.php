@@ -15,6 +15,14 @@ return new class extends Migration
     {
         Schema::create('proprietes', function (Blueprint $table) {
             $table->id();
+            $table->string('libelle');
+            $table->string('superficie');
+            $table->integer('nombrePiece');
+            $table->foreignId('quartier_id')->constrained();
+            $table->foreignId('deduction_id')->constrained();
+            $table->foreignId('agence_id')->constrained();
+            $table->foreignId('type_id')->constrained();
+            $table->foreignId('proprietaire_id')->constrained();
             $table->timestamps();
         });
     }

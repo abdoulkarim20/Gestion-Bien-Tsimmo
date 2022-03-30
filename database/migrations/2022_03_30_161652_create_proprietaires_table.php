@@ -19,6 +19,10 @@ return new class extends Migration
             $table->string('nom');
             $table->date('dateNaissance');
             $table->string('lieuNaissance');
+            $table->string('civilite')->lenght(3);
+            $table->integer('codePieceIdentite')->lenght(17);
+            $table->integer('numeroPieceIdentite')->lenght(14);
+
             $table->timestamps();
         });
     }

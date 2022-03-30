@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('deductions', function (Blueprint $table) {
             $table->id();
+            $table->integer('montant');
+            $table->dateTime('dateDeduction');
             $table->timestamps();
         });
     }
