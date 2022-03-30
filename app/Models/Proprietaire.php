@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Proprietaire extends Model
 {
     use HasFactory;
+    public function proprietes()
+    {
+        return $this->hasMany(Propriete::class);
+    }
 }
