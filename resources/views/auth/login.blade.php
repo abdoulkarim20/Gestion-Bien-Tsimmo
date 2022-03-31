@@ -1,8 +1,3 @@
-
- 
- 
-
-
     <section class="inner-page">
        <div class="container">
         <p>
@@ -65,6 +60,8 @@
         </p>
       </div>
     </section>
+
+    
 
 
 
