@@ -1,6 +1,6 @@
-@include('components.design_tasnim.entete')
 
-@include('components.design_tasnim.menu')
+
+
  
  
 
@@ -69,7 +69,7 @@
     </section>
 
 
-@include('components.design_tasnim.footer')
+
 
 
  
