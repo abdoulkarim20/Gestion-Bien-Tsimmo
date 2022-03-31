@@ -18,6 +18,7 @@ require __DIR__ . '/auth.php';
 // Route::get('proprietes/ajouter',[ProprieteController::class,'ajouter']);
 // Route::post('proprietes/enregistrer',[ProprieteController::class,'enregistrer']);
 // Route::resource('proprietes',ProprieteController::class);
+Route::get('proprietes',[ProprieteController::class,'listes']);
 Route::get('proprietes/ajouter',[ProprieteController::class,'ajouter']);
 Route::post('proprietes/enregistrer',[ProprieteController::class,'enregistrer']);
 //Fin route pour les propriete

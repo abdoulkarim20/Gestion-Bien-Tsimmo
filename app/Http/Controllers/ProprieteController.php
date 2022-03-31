@@ -12,6 +12,10 @@ use App\Models\Propriete;
 
 class ProprieteController extends Controller
 {
+    public function listes(){
+        return view('propriete.liste');
+    }
+
     public function ajouter(){
         $types = Type::all();
         $agences= Agence::all();
@@ -33,7 +37,7 @@ class ProprieteController extends Controller
         $propriete->proprietaire_id=$request->proprietaire_id;
         $propriete->save();
         if($propriete){
-            return "Bien ajouter"; 
+            return redirect('proprietes');
         }
     }
 }

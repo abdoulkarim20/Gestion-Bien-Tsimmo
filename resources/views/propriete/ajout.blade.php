@@ -1,13 +1,12 @@
-@foreach($types as $type)
-{{$type->libelle}}
-@endforeach
+@include('./components.design_tasnim.entete')
 
+@include('./components.design_tasnim.menu')
 <div class="form-body">
     <div class="row">
         <div class="form-holder">
             <div class="form-content">
                 <div class="form-items">
-                    <h3>Ajouter une proprietaire</h3>
+                    <h3>Ajouter une propriete</h3>
                     <form  method="POST" action="{{ url('proprietes/enregistrer') }}">
                        @csrf
                         <div class="col-md-12">
@@ -75,3 +74,4 @@
         </div>
     </div>
 </div>
+@include('./components.design_tasnim.footer')
