@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 
 class ProprieteController extends Controller
 {
-    public function list(){
+    public function lister(){
         return view('propriete.liste');
     }
-    public function ajout(){
+    public function ajouter(){
         return view('propriete.ajout');
     }
 }

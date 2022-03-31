@@ -31,16 +31,15 @@
     
         @guest
         <div class="d-flex justify-content-between align-items-center">
-          <ol>
+          {{-- <ol>
             <li><a href="login" class="btn btn-success">Connexion</a></li>
             <li><a href="register" class="btn btn-success">S'inscrire</a></li>
-          </ol>
+          </ol> --}}
         </div>
         @else
           <x-app-layout>
           </x-app-layout>
         @endguest
-
-        
+       
          
   </div>
