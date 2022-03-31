@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Quartier extends Model
 {
-    use HasFactory;
+    protected $fillable = ['libelle'];
+    public function proprietes()
+    {
+        return $this->hasMany(Propriete::class);
+    }
 }

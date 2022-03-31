@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Deduction extends Model
 {
-    use HasFactory;
+    protected $fillable = ['montant', 'dateDeduction'];
+    public function proprietes()
+    {
+        return $this->hasMany(Propriete::class);
+    }
 }

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('nom');
             $table->date('dateNaissance');
             $table->string('lieuNaissance');
-            $table->string('civilite')->lenght(3);
+            $table->string('civilite')->lenght(20);
             $table->integer('codePieceIdentite')->lenght(17);
             $table->integer('numeroPieceIdentite')->lenght(14);
 
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('proprietaires');
+        Schema::drop('proprietaires');
     }
 };

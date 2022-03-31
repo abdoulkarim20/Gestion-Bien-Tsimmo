@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Agence extends Model
 {
-    use HasFactory;
+    protected $fillable = ['libelle', 'position'];
+    public function proprietes()
+    {
+        return $this->hasMany(Propriete::class);
+    }
 }

@@ -18,11 +18,11 @@ return new class extends Migration
             $table->string('libelle');
             $table->string('superficie');
             $table->integer('nombrePiece');
-            $table->foreignId('quartier_id')->constrained();
-            $table->foreignId('deduction_id')->constrained();
-            $table->foreignId('agence_id')->constrained();
-            $table->foreignId('type_id')->constrained();
-            $table->foreignId('proprietaire_id')->constrained();
+            $table->foreignId('quartier_id')->constrained()->onUpdate('cascade')->onDelete('restrict');
+            $table->foreignId('deduction_id')->constrained()->onUpdate('cascade')->onDelete('restrict');
+            $table->foreignId('agence_id')->constrained()->onUpdate('cascade')->onDelete('restrict');
+            $table->foreignId('type_id')->constrained()->onUpdate('cascade')->onDelete('restrict');
+            $table->foreignId('proprietaire_id')->constrained()->onUpdate('cascade')->onDelete('restrict');
             $table->timestamps();
         });
     }
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('proprietes');
+        Schema::drop('proprietes');
     }
 };
