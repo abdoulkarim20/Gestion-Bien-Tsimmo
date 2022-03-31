@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ProprieteController;
+use App\Models\Propriete;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +24,10 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 
-
+//La route pour toutes les methode de la propriete
+Route::get('proprietes',[ProprieteController::class,'list']);
+Route::get('proprietes/ajout',[ProprieteController::class,'ajout']);
+Route::post('proprietes/enregistrer',[ProprieteController::class,'enregistrer']);
+//Fin route pour les propriete
 
 require __DIR__ . '/auth.php';
