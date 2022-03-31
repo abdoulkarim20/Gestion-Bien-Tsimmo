@@ -29,11 +29,17 @@
   <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-          <h2></h2>
+          @guest
           <ol>
-              <li><a href="login" class="btn btn-success">Connexion</a></li>
-              <li><a href="register" class="btn btn-success">S'inscrire</a></li>
+            <li><a href="login" class="btn btn-success">Connexion</a></li>
+            <li><a href="register" class="btn btn-success">S'inscrire</a></li>
           </ol>
+          @else
+          <x-app-layout>
+          </x-app-layout>
+          @endguest
       </div>
+
+
       
   </div>
